@@ -6,3 +6,4 @@ Log in , Sign up, add to cart, remove from cart, checkout form (with a twist), o
 hosted on heroku : 
 https://pied-piper-website.herokuapp.com/
 
+P.S: I hope you enjoyed the joke 
