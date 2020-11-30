@@ -34,7 +34,7 @@
                 <a class="nav-link" id="nav3" href="{% url 'ppcards' %}">PP CARDS</a>
                 
               </div>
-              <div class="navbar-nav ml-1350">
+              <div class="navbar-nav ml-auto">
                 {% if request.user.is_authenticated %}
                 <a class="navbar-brand" id="cart" href="{% url 'checkout' %}">
                   <span class="badge badge-warning z-depth-1 mr-1" > {{ request.user|cart_item_count }} </span>
@@ -57,30 +57,30 @@
 
         <!--SLIDER SECTION-->
     
-    <div class="swiper-container" style="width: 100%;height: 580px;" id="">
-        <!-- Additional required wrapper -->
-        <div class="swiper-wrapper" >
-            <!-- Slides -->
-            <div class="swiper-slide" >
-              <img src="{% static 'img1.jpg' %}" style="width: 1350;height: 580px;">
-            </div>
-            <div class="swiper-slide" >
-              <img src="{% static 'img2.jpg' %}" style="width: 1350;height: 580px;">
-            </div>
-            <div class="swiper-slide">
-              <img src="{% static 'img3.jpg' %}" style="width: 1350;height: 580px;">
-            </div>
-            ...
-        </div>
-        <!-- need pagination -->
-        <div class="swiper-pagination"></div>
-
-        <!-- navigation buttons -->
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
-
-        
-    </div>    
+      <div class="swiper-container" style="width: 100%;height: 580px;">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide">
+                <img src="{% static 'img1.jpg' %}" style="width: 100%;height: 580px;">
+              </div>
+              <div class="swiper-slide">
+                <img src="{% static 'img2.jpg' %}" style="width: 100%;height: 580px;">
+              </div>
+              <div class="swiper-slide">
+                <img src="{% static 'img3.jpg' %}" style="width: 100%;height: 580px;">
+              </div>
+              ...
+          </div>
+          <!-- need pagination -->
+          <div class="swiper-pagination"></div>
+  
+          <!-- navigation buttons -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+  
+          
+      </div>     
 
     <div class="container">
         <!--Navbar-->
@@ -142,24 +142,24 @@
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
     <script>
-        var swiper = new Swiper('.swiper-container', {
-          1350Height: true,
-          spaceBetween: 1,
-        i style="width: 100%;"des: true,
-          1350play: {
-            delay: 4000,
-            disableOnInteraction: false,
-          },
-          pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-          },
-          navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-          },
-        });
-    </script>
+      var swiper = new Swiper('.swiper-container', {
+        autoHeight: true,
+        spaceBetween: 1,
+        centeredSlides: true,
+        autoplay: {
+          delay: 4000,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+      });
+  </script>
 
 </body>
 </html>
