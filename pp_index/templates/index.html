@@ -19,6 +19,16 @@
 
 </head>
 <body>
+    {% if messages %}
+      {% for message in messages %}
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+          <strong>{{ message }}</strong>
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+      {% endfor %}
+    {% endif %}
 
     <section id="nav-bar" style="width: 100%;">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -160,6 +170,10 @@
         },
       });
   </script>
-
+  <script>
+    $('.alert').on('closed.bs.alert', function () {
+      // do something…
+      })
+  </script>
 </body>
 </html>

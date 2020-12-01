@@ -9,7 +9,8 @@ def register(response):
         form = RegisterForm(response.POST)
         if form.is_valid():
             form.save()
-            return redirect("accounts/login")
+            messages.success(response, "You have Signed up Successfully.")
+            return redirect("/")
         else:
             messages.error(response, "Please fill up the Signup form correctly")
 
